@@ -4,8 +4,14 @@ class TodoItemsController < ApplicationController
   def create
     @todo_item = @todo_list.todo_items.create(todo_item_params)
 
-    rediect_to @todo_list
+    redirect_to @todo_list
   end
+
+  def destroy
+    @todo_item = @todo_list.todo_items.find(params[:id])
+    @todo_item.destroy
+    redirect_to @todo_list
+  end  
 
   private
 
