@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     end
   end  
 
-  get '/auth/:provider/callback', to 'sessions#create'
+  get 'auth/:provider/callback', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 
   root "todo_lists#index"
 end

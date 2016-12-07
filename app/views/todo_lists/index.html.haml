@@ -1,3 +1,13 @@
+%ul.navbar
+  - if current_user          
+    %li.usr
+      Welcome,
+      = current_user.name.titleize
+    %li  
+      = link_to 'Logout', logout_path, method: :delete
+  - else
+    %li= link_to 'Login with Github', '/auth/github'
+
 %p#notice= notice
 %h1 Todo Lists
 %table
