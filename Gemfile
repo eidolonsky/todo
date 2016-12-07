@@ -59,3 +59,6 @@ gem "haml-rails", "~> 0.9"
 
 # Adding OAuth logins
 gem "omniauth-github"
+gem 'omniauth'
+gem 'therubyracer'
+gem 'devise'
